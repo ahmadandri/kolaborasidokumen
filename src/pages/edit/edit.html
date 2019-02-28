@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar>
+
+    <ion-buttons left>
+          <button ion-button icon-only (click)="back()">
+              <ion-icon name="arrow-back"></ion-icon>
+          </button>
+    </ion-buttons>
+    
+    <ion-title>Edit
+      <span style="float: right;font-size: medium">
+        <span style="background-color: lightblue;">{{result_timer}}</span>
+        <span>{{timer2}}</span>
+      </span>
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+  <ion-content padding>
+
+  <ion-fab top right edge>
+    <button ion-fab mini (click)='log()'><ion-icon name="create"></ion-icon></button>
+  </ion-fab>
+
+
+  <div class="sample">
+  	<h3>Edit document {{title}}</h3>
+  	<textarea [froalaEditor]="options" 
+  		id='froalaEditor2'
+      #froalaEditor1 
+  		[(froalaModel)]="text">
+  	</textarea>
+  </div>
+  
+
+</ion-content>
+
+
+<ion-fab right bottom>
+    <button ion-fab color="light" (click)='chat()'><ion-icon name="chatbubbles" ></ion-icon></button>
+</ion-fab>

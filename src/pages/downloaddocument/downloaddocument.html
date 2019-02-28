@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left>
+            <button ion-button icon-only (click)="back()">
+                <ion-icon name="arrow-back"></ion-icon>
+            </button>
+      </ion-buttons>
+
+    <ion-title>Download
+      <span style="float: right;font-size: medium">
+        <span style="background-color: lightblue;">{{result_timer}}</span>
+        <span>{{timer2}}</span>
+      </span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    
+   <ion-item>
+      <ion-label floating >File Name : </ion-label>
+     <ion-input type="" [(ngModel)]="fileName" ></ion-input>
+   </ion-item>
+  <button ion-button (click)="generatePdf()" [disabled]="!fileName">Create PDF</button>
+</ion-content>
+<div id="Html2Pdf">
+</div>
